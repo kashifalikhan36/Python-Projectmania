@@ -3,6 +3,7 @@ import random
 turtles=["yellow","green","blue","orange","red","black"]
 real_turtles=[]
 screen=Screen()
+screen.setup(500,400)
 user_bet=screen.textinput("Makke ur bet","Which turtle will wn the race? Enter a color:")
 k=0
 p=-100
