@@ -8,17 +8,54 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
+REPS=0
+timer_clock=None
+
 
 # ---------------------------- TIMER RESET ------------------------------- # 
-
+def reset():
+    window.after_cancel(timer_clock)
+    timer.config(text="Timer",fg=GREEN)
+    canvas.itemconfig(timer_text,text="00:00")
+    check_mark.config(text="")
+    global REPS
+    REPS=0
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
+
 def start_timer():
-    count_down(5*60)
+    global WORK
+    global REPS
+    REPS+=1
+    work_min=int(WORK_MIN*60)
+    short_break_min=int(SHORT_BREAK_MIN*60)
+    long_break_min=int(LONG_BREAK_MIN*60)
+    if REPS%8==0:
+        timer.config(text="BREAK",fg=RED)
+        count_down(int(short_break_min/60))
+    elif REPS%2==0:
+        timer.config(text="BREAK",fg=PINK)
+        count_down(int(long_break_min/60))
+        
+    else:
+        timer.config(text="WORK",fg=GREEN)
+        count_down(int(work_min/60))
+        
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
-    canvas.itemconfig(timer_text,text=f"{int(count/60)}:{int(count%60)}")
+    count_min=int(count/60)
+    count_sec=int(count%60)
+    if 0<=count_sec<10:
+        count_sec=f"0{count}"
+    canvas.itemconfig(timer_text,text=f"{count_min}:{count_sec}")
     if count>0:
-        window.after(1000,count_down,count-1)
+        global timer_clock
+        timer_clock=window.after(1000,count_down,count-1)
+    else:
+        start_timer()
+        WORK=""
+        for _ in range(int(REPS/2)):
+            WORK+="✓"
+        check_mark.config(text=WORK)
 
 # ---------------------------- UI SETUP ------------------------------- #
 window=Tk()
@@ -38,10 +75,10 @@ timer.grid(column=2,row=1)
 start=Button(text="Start",command=start_timer)
 start.grid(column=1,row=3)
 
-reset=Button(text="reset")
+reset=Button(text="reset",command=reset)
 reset.grid(column=3,row=3)
 
-check_mark=Label(text="✓",fg=GREEN)
+check_mark=Label(fg=GREEN,bg=YELLOW)
 check_mark.grid(column=2,row=4)
 
 window,mainloop()
