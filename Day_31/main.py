@@ -11,14 +11,19 @@ finally:
     french_word=random.choice(list(words.keys()))
     english_word=words[french_word]
 
+def data_helper():
+    global words
+    dict_items = list(words.items())
+    dict_items.insert(0, ("French", "English"))
+    words=dict(dict_items)
 def right_button_del():
     del words[french_word]
-    learn=pandas.DataFrame.from_dict(words, orient='columns')
-    print(learn)
+    data_helper()
+    learn=pandas.DataFrame.from_dict(words, orient='index')
+    learn.to_csv("Day_31\\data\\learn_words.csv",header=False)
+    del words["French"]
     next_card()
     
-    
-
 def next_card():
     global french_word
     global english_word
