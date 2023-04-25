@@ -26,13 +26,12 @@ response = requests.get("https://api.sunrise-sunset.org/json", params=parameters
 response.raise_for_status()
 data_1 = response.json()
 sunrise = data_1["results"]["sunrise"].split("T")[1].split(":")
-sunset = int(data_1["results"]["sunset"].split("T")[1].split(":")[0])
-time_sunrise= datetime.time(int(sunrise[0]),int(sunrise[1]),int(sunrise[2]))
-time_sunset= datetime.time(int(sunset[0]),int(sunset[1]),int(sunset[2]))
+sunset = data_1["results"]["sunset"].split("T")[1].split(":")
+time_sunrise= datetime.time(int(sunrise[0]),int(sunrise[1]),int(sunrise[2][0]+sunrise[2][1]))
+time_sunset= datetime.time(int(sunset[0]),int(sunset[1]),int(sunset[2][0]+sunset[2][1]))
 time_now = datetime.datetime.now().time()
-print(time_now)
 #If the ISS is close to my current position
-if 75.0<=float(data_1["iss_position"]['longitude'])<=85.0 and 20.0<=float(data_1["iss_position"]['latitude'])<=30.0:
+if 75.0<=iss_longitude<=85.0 and 20.0<=iss_latitude<=30.0:
     if time_now>=time_sunrise:
         ms="it is currently bright."
     elif time_now>=time_sunset:
