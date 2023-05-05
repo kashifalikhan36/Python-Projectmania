@@ -6,11 +6,11 @@ from flight_data import FlightData
 flight_search=FlightSearch()
 data=DataManager()
 
-for i in range(2,12):
-    city_name=data.give(i)['city']
-    iata_name=flight_search.get_destination_code(city_name)
-    price=flight_search.flight_search(i)
-    data.add_test(i,iata_name,price)
+# for i in range(2,12):
+#     city_name=data.give(i)['city']
+#     iata_name=flight_search.get_destination_code(city_name)
+#     price=flight_search.flight_search(i)
+#     data.add_test(i,iata_name,price)
 
 
 flight_data=FlightData()

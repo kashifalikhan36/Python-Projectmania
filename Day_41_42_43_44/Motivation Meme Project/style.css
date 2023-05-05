@@ -1,0 +1,20 @@
+*{
+    
+    text-align: center;
+    background-color: black;
+
+}
+#first{
+    margin-top: 10%;
+}
+#second{
+    color: white;
+}
+h1{
+    font: "Libre Baskerville", serif;
+    
+    text-transform: capitalize;
+}
+img{
+    border: 5px solid white;
+}
