@@ -16,7 +16,7 @@ HEADER={
 response=requests.get(url=Product_URL,headers=HEADER).text
 soup=BeautifulSoup(response,"lxml")
 price=int(soup.find("span",class_="a-price-whole").text.strip("."))
-title=soup.find("span", id="productTitle", class_="a-size-large product-title-word-break").text.strip("")
+title=soup.find("span", id="productTitle", class_="a-size-large product-title-word-break")
 
 if price<700:
     with smtplib.SMTP("smtp.gmail.com") as connection:
