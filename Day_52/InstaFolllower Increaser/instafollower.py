@@ -48,16 +48,17 @@ class InstaFollower:
             except ElementClickInterceptedException:
                 try:
                     time.sleep(2)
-                    cancel_button = self.driver.find_element('xath','//*[@id="mount_0_0_zi"]/div/div/div[3]/div/div[2]/div[1]/div/div[2]/div/div/div/div/div/div/button[2]')
+                    cancel_button = self.driver.find_element('xath','/html/body/div[2]/div/div/div[3]/div/div[2]/div[1]/div/div[2]/div/div/div/div/div/div/button[2]')
                     cancel_button.click()
                 except:
                     print("cancel button not work")
-                    time.sleep(100)
+                    time.sleep(6)
             except :
                 print('error')
         # except NoSuchElementException:
         #     print("No application button, skipped.")
         time.sleep(100)
+
     # auth3=driver.find_element('xpath','/html/body/div[1]/div/div[2]/div/div/div[1]/div[1]/button')
     # auth3.click()
     # '/html/body/div[1]/div/div[1]/div/main/div[1]/div/div/div[1]/div[1]/div/div[3]/div/div[4]/button'
