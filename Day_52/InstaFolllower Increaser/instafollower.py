@@ -11,7 +11,7 @@ class InstaFollower:
         self.chrome_driver_path = "C:/code_development/chromedriver.exe"
         self.driver = webdriver.Chrome(self.chrome_driver_path)
         self.username="al_arabiy_always"
-        self.password='Aquatype1'
+        self.password='Password'
         
     def login(self):   
         self.driver.get('https://www.instagram.com')

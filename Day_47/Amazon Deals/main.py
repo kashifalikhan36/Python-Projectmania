@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup
 import smtplib
 
 my_email = "itnajitna@gmail.com"
-passw = "imwfxsmrztktngjh"
+passw = "password"
 
-account_sid ="ACc97d07942975958296f11ef0697129bd"
-auth_token ="c7765cd1effe6b95acc565ad2a50eeb8"
+account_sid ="sid"
+auth_token ="token"
 
 Product_URL="https://www.amazon.in/gp/product/B0BQC1L5XW/ref=ox_sc_act_title_1?smid=A2GTG1HPYW8M2P&psc=1"
 HEADER={

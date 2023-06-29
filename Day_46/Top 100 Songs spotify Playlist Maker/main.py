@@ -4,8 +4,8 @@ import re
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-SPOTIPY_CLIENT_ID="ca1cf6ce5c8e40b5affdb83c2f9d2f1d"
-SPOTIPY_CLIENT_SECRET="6570debcf4a34eefa8f197936f3c5a03"
+SPOTIPY_CLIENT_ID="id"
+SPOTIPY_CLIENT_SECRET="secret id"
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-public playlist-modify-private",

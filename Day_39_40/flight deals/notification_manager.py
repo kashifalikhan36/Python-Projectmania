@@ -2,10 +2,10 @@ from twilio.rest import Client
 import smtplib
 
 my_email = "itnajitna@gmail.com"
-passw = "imwfxsmrztktngjh"
+passw = "password"
 
-account_sid ="ACc97d07942975958296f11ef0697129bd"
-auth_token ="c7765cd1effe6b95acc565ad2a50eeb8"
+account_sid ="sid"
+auth_token ="token"
 
 class NotificationManager:
     def __init__(self):

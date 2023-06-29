@@ -9,7 +9,7 @@ class InternetSpeedTwitterBot:
         self.Promised_down='29'
         self.Promised_up='2'
         self.twitter_email='kashifalikhan78677868@gmail.com'
-        self.twitter_pass='Aquatype1'
+        self.twitter_pass='Password'
         self.twitter_id='Kashifalik360'
         self.get_internet_speed()
         self.twitter_post_text='Hey internet Provider why my internet is Download speed:-{self.data[0]} and Upload Speed:-{self.data[1]}'

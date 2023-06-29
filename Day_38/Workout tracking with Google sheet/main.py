@@ -1,8 +1,8 @@
 import requests
 from datetime import datetime
 
-ID = "b0d7b587"
-KEY = "a83921893402f60e8df378cb01ac5f27"
+ID = "ID"
+KEY = "Key"
 
 nutritionix_api_endpoits = "https://trackapi.nutritionix.com/v2/natural/exercise"
 

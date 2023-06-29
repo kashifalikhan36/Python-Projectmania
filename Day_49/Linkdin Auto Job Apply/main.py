@@ -15,7 +15,7 @@ try:
     user=driver.find_element('xpath','//*[@id="username"]')
     user.send_keys('kashifalikhan093@gmail.com')
     password=driver.find_element('xpath','//*[@id="password"]')
-    password.send_keys('Aquatype1')
+    password.send_keys('Password')
     login=driver.find_element('xpath','//*[@id="organic-div"]/form/div[3]/button')
     login.click()
     time.sleep(3)

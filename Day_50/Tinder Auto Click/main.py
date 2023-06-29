@@ -29,7 +29,7 @@ try:
     user=driver.find_element('xpath','/html/body/div/div[2]/div[1]/form/div/div[1]/div/input')
     user.send_keys('kashifalikhan093@gmail.com')
     password=driver.find_element('xpath','/html/body/div/div[2]/div[1]/form/div/div[2]/div/input')
-    password.send_keys('Aquatype1')
+    password.send_keys('Password')
     login=driver.find_element('xpath','/html/body/div/div[2]/div[1]/form/div/div[3]/label[2]/input')
     login.click()
     time.sleep(10)

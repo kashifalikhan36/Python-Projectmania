@@ -3,7 +3,7 @@ import datetime as dt
 import random
 
 my_email = "itnajitna@gmail.com"
-passw = "imwfxsmrztktngjh"
+passw = "password"
 
 def quots():
     data=open("Day_32\Monday_Motivation\quotes.txt",mode="r")

@@ -6,7 +6,7 @@
 # tommorow=datetime.now().date()+timedelta(days=1)
 # six_month_later=datetime.now().date()+timedelta(days=6*30)
 # TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
-# TEQUILA_API_KEY = "QvpJfeP3woCaaV50Toywqywoj14v69Xi"
+# TEQUILA_API_KEY = "api"
 
 # notify=NotificationManager()
 
@@ -63,7 +63,7 @@
 # import requests
 
 # SHEETY_API_ENDPOINTS_EMAILS = "https://api.sheety.co/f9dd6f5b40aeef7d9f6f6a1cc5b520a3/flightDeal/emails"
-# sheety_header = {"Authorization": "Basic a2FzaGlmOkFxdWF0eXBlMQ=="}
+# sheety_header = {"Authorization": "Basic a2FzaGlmOkFxdWF0eXBlM"}
 
 # response_sheety = requests.get(url=f"{SHEETY_API_ENDPOINTS_EMAILS}",
 #                                   headers=sheety_header)
@@ -71,7 +71,7 @@
 # import smtplib
 
 # my_email = "itnajitna@gmail.com"
-# passw = "imwfxsmrztktngjh"
+# passw = "password"
 
 # with smtplib.SMTP("smtp.gmail.com") as connection:
 #     connection.starttls()

@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 
 USERNAME="kashif99"
-TOKEN="jskdcno2i3jdowenh34owe"
+TOKEN="token"
 pixela_endpoints="https://pixe.la/v1/users"
 
 user_prams={

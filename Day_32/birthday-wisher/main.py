@@ -5,7 +5,7 @@ import pandas
 import math
 texts=[]
 my_email = "itnajitna@gmail.com"
-passw = "imwfxsmrztktngjh"
+passw = "password"
 data={row.names:[row.email,row.year,row.month,row.day] for index,row in pandas.read_csv("Day_32\\birthday-wisher\\birthdays.csv").iterrows()}
 letters=["Day_32\\birthday-wisher\letter_templates\letter_1.txt","Day_32\\birthday-wisher\letter_templates\letter_2.txt","Day_32\\birthday-wisher\letter_templates\letter_3.txt"]
 

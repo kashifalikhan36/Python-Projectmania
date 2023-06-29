@@ -2,8 +2,8 @@
 
 import requests
 from twilio.rest import Client
-account_sid ="ACc97d07942975958296f11ef0697129bd"
-auth_token ="c7765cd1effe6b95acc565ad2a50eeb8"
+account_sid ="sid"
+auth_token ="token"
 client = Client(account_sid, auth_token)
 
 message = client.messages \
